@@ -40,22 +40,80 @@
             </li>
           </ul>
         </nav>
-        <ul class="list content-list">
-          <li>
-            <a href="mailto:info@devstudio.com" class="header-link link mail">
-              <svg class="envelope" width="16" height="12">
-                <use href="./images/icon.svg#icon-envelope"></use></svg
-              >info@devstudio.com</a
-            >
+        <button type="button" class="burger" data-menu-open>
+          <svg width="24" height="16">
+            <use href="./images/icon.svg#icon-burger"></use>
+          </svg>
+        </button>
+        <div class="content-box">
+          <ul class="list content-list">
+            <li class="content-box-mail">
+              <a href="mailto:info@devstudio.com" class="header-link link mail">
+                <svg class="envelope" width="16" height="12">
+                  <use href="./images/icon.svg#icon-envelope"></use></svg
+                >info@devstudio.com</a
+              >
+            </li>
+            <li>
+              <a href="tel:+380961111111" class="header-link link mail">
+                <svg class="smartphone" width="10" height="16">
+                  <use href="./images/icon.svg#icon-smartphone"></use></svg
+                >+38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mobile-menu" data-menu>
+        <button type="button" class="cross" data-menu-close>
+          <svg width="19" height="19">
+            <use href="./images/icon.svg#icon-Vector"></use>
+          </svg>
+        </button>
+        <ul class="list mobile-list">
+          <li class="mobile-string">
+            <a href="./index.html" class="mobile-link link">Студия</a>
           </li>
-          <li>
-            <a href="tel:+380961111111" class="header-link link mail">
+          <li class="mobile-string">
+            <a href="" class="mobile-link link current-menu">Портфолио</a>
+          </li>
+          <li class="mobile-string">
+            <a href="" class="mobile-link link">Контакты</a>
+          </li>
+        </ul>
+        <ul class="list">
+          <li class="mobile-tel">
+            <a
+              href="tel:+380961111111"
+              class="mobile-smartphone link mail-menu-text"
+            >
               <svg class="smartphone" width="10" height="16">
                 <use href="./images/icon.svg#icon-smartphone"></use></svg
               >+38 096 111 11 11</a
             >
           </li>
+          <li class="mobile-mail">
+            <a href="mailto:info@devstudio.com" class="mobile-envelope link">
+              <svg class="envelope" width="16" height="12">
+                <use href="./images/icon.svg#icon-envelope"></use></svg
+              >info@devstudio.com</a
+            >
+          </li>
         </ul>
+        <div class="mobile-soc">
+          <li class="list mobile-soc-string">
+            <a href="" class="mobile-soc-link link">Instagramm</a>
+          </li>
+          <li class="list mobile-soc-string">
+            <a href="" class="mobile-soc-link link">Twitter</a>
+          </li>
+          <li class="list mobile-soc-string">
+            <a href="" class="mobile-soc-link link">Facebook</a>
+          </li>
+          <li class="list mobile-soc-string">
+            <a href="" class="mobile-soc-link link">LinkedIn</a>
+          </li>
+        </div>
       </div>
     </header>
     <main>
@@ -83,13 +141,36 @@
             <li class="filter-cards">
               <a href="" class="portfolio-link link">
                 <div class="portfolio-wrap">
-                  <img
-                    src="./images/Technokryak.jpg"
-                    alt="Сайт на ноутбуке"
-                    width="370"
-                    height="294"
-                    class="portfolio-image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-techno-desktop-1x.jpg 1x,
+                        ./images/portfolio-techno-desktop-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-techno-tablet-1x.jpg 1x,
+                        ./images/portfolio-techno-tablet-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-techno-mobile-1x.jpg 1x,
+                        ./images/portfolio-techno-mobile-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/portfolio-techno-mobile-1x.jpg"
+                      alt="Сайт на ноутбуке"
+                      width="450"
+                      height="294"
+                      class="portfolio-image"
+                    />
+                  </picture>
                   <p class="portfolio-popup-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -105,13 +186,36 @@
             <li class="filter-cards">
               <a href="" class="portfolio-link link">
                 <div class="portfolio-wrap">
-                  <img
-                    src="./images/Poster.jpg"
-                    alt="Два баскетболиста"
-                    width="370"
-                    height="294"
-                    class="portfolio-image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-poster-desktop-1x.jpg 1x,
+                        ./images/portfolio-poster-desktop-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-poster-tablet-1x.jpg 1x,
+                        ./images/portfolio-poster-tablet-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-poster-mobile-1x.jpg 1x,
+                        ./images/portfolio-poster-mobile-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/portfolio-poster-mobile-1x.jpg"
+                      alt="Два баскетболиста"
+                      width="450"
+                      height="294"
+                      class="portfolio-image"
+                    />
+                  </picture>
                   <p class="portfolio-popup-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -129,13 +233,36 @@
             <li class="filter-cards">
               <a href="" class="portfolio-link link">
                 <div class="portfolio-wrap">
-                  <img
-                    src="./images/Seafood.jpg"
-                    alt="Эмблема ресторана"
-                    width="370"
-                    height="294"
-                    class="portfolio-image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-seafood-desktop-1x.jpg 1x,
+                        ./images/portfolio-seafood-desktop-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-seafood-tablet-1x.jpg 1x,
+                        ./images/portfolio-seafood-tablet-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-seafood-mobile-1x.jpg 1x,
+                        ./images/portfolio-seafood-mobile-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/portfolio-seafood-mobile-1x.jpg"
+                      alt="Эмблема ресторана"
+                      width="450"
+                      height="294"
+                      class="portfolio-image"
+                    />
+                  </picture>
                   <p class="portfolio-popup-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -153,13 +280,36 @@
             <li class="filter-cards">
               <a href="" class="portfolio-link link">
                 <div class="portfolio-wrap">
-                  <img
-                    src="./images/Prime.jpg"
-                    alt="Наушники"
-                    width="370"
-                    height="294"
-                    class="portfolio-image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-prime-desktop-1x.jpg 1x,
+                        ./images/portfolio-prime-desktop-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-prime-tablet-1x.jpg 1x,
+                        ./images/portfolio-prime-tablet-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-prime-mobile-1x.jpg 1x,
+                        ./images/portfolio-prime-mobile-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/portfolio-prime-mobile-1x.jpg"
+                      alt="Наушники"
+                      width="450"
+                      height="294"
+                      class="portfolio-image"
+                    />
+                  </picture>
                   <p class="portfolio-popup-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -177,13 +327,36 @@
             <li class="filter-cards">
               <a href="" class="portfolio-link link">
                 <div class="portfolio-wrap">
-                  <img
-                    src="./images/Boxes.jpg"
-                    alt="Две коробки"
-                    width="370"
-                    height="294"
-                    class="portfolio-image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-boxes-desktop-1x.jpg 1x,
+                        ./images/portfolio-boxes-desktop-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-boxes-tablet-1x.jpg 1x,
+                        ./images/portfolio-boxes-tablet-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-boxes-mobile-1x.jpg 1x,
+                        ./images/portfolio-boxes-mobile-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/portfolio-boxes-mobile-1x.jpg"
+                      alt="Две коробки"
+                      width="450"
+                      height="294"
+                      class="portfolio-image"
+                    />
+                  </picture>
                   <p class="portfolio-popup-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -201,13 +374,36 @@
             <li class="filter-cards">
               <a href="" class="portfolio-link link">
                 <div class="portfolio-wrap">
-                  <img
-                    src="./images/Inspiration.jpg"
-                    alt="Десктоп"
-                    width="370"
-                    height="294"
-                    class="portfolio-image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-inspiration-desktop-1x.jpg 1x,
+                        ./images/portfolio-inspiration-desktop-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-inspiration-tablet-1x.jpg 1x,
+                        ./images/portfolio-inspiration-tablet-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-inspiration-mobile-1x.jpg 1x,
+                        ./images/portfolio-inspiration-mobile-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/portfolio-inspiration-mobile-1x.jpg"
+                      alt="Десктоп"
+                      width="450"
+                      height="294"
+                      class="portfolio-image"
+                    />
+                  </picture>
                   <p class="portfolio-popup-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -225,13 +421,36 @@
             <li class="filter-cards">
               <a href="" class="portfolio-link link">
                 <div class="portfolio-wrap">
-                  <img
-                    src="./images/Book.jpg"
-                    alt="Открытая книга"
-                    width="370"
-                    height="294"
-                    class="portfolio-image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-limited-desktop-1x.jpg 1x,
+                        ./images/portfolio-limited-desktop-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-limited-tablet-1x.jpg 1x,
+                        ./images/portfolio-limited-tablet-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-limited-mobile-1x.jpg 1x,
+                        ./images/portfolio-limited-mobile-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/portfolio-limited-mobile-1x.jpg"
+                      alt="Открытая книга"
+                      width="450"
+                      height="294"
+                      class="portfolio-image"
+                    />
+                  </picture>
                   <p class="portfolio-popup-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -249,13 +468,36 @@
             <li class="filter-cards">
               <a href="" class="portfolio-link link">
                 <div class="portfolio-wrap">
-                  <img
-                    src="./images/Label.jpg"
-                    alt="Бейджик"
-                    width="370"
-                    height="294"
-                    class="portfolio-image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-lab-desktop-1x.jpg 1x,
+                        ./images/portfolio-lab-desktop-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-lab-tablet-1x.jpg 1x,
+                        ./images/portfolio-lab-tablet-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-lab-mobile-1x.jpg 1x,
+                        ./images/portfolio-lab-mobile-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/portfolio-lab-mobile-1x.jpg"
+                      alt="Бейджик"
+                      width="450"
+                      height="294"
+                      class="portfolio-image"
+                    />
+                  </picture>
                   <p class="portfolio-popup-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -273,13 +515,36 @@
             <li class="filter-cards">
               <a href="" class="portfolio-link link">
                 <div class="portfolio-wrap">
-                  <img
-                    src="./images/Business.jpg"
-                    alt="Ноутбук"
-                    width="370"
-                    height="294"
-                    class="portfolio-image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-business-desktop-1x.jpg 1x,
+                        ./images/portfolio-business-desktop-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-business-tablet-1x.jpg 1x,
+                        ./images/portfolio-business-tablet-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-business-mobile-1x.jpg 1x,
+                        ./images/portfolio-business-mobile-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/portfolio-business-mobile-1x.jpg"
+                      alt="Ноутбук"
+                      width="450"
+                      height="294"
+                      class="portfolio-image"
+                    />
+                  </picture>
                   <p class="portfolio-popup-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -352,14 +617,14 @@
             </li>
             <li class="welcome-soc-list">
               <a href="" class="welcome-soc-link link">
-                <svg class="welcome-soc-icon" width="24" height="24">
+                <svg class="welcome-soc-icon" width="20" height="20">
                   <use href="./images/icon.svg#icon-linkedin"></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
-        <div>
+        <div class="welcome__thumb">
           <h3 class="welcome-title">Подпишитесь на рассылку</h3>
           <form class="distribution">
             <input
@@ -377,5 +642,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

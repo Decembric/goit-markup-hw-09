@@ -1,26 +1,40 @@
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .clients__title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  @include desktop {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
 }
 
 .clients__content {
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
   justify-content: space-between;
+  @include desktop {
+    flex-wrap: nowrap;
+  }
 }
 
 .clients__link {
   display: flex;
-  width: 170px;
+  // width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -40,5 +54,12 @@
   .clients__link:hover &,
   .clients__link:focus & {
     fill: var(--hover-text-color);
+  }
+}
+
+.clients__box {
+  width: calc((100% - 30px) / 2);
+  @include tablet {
+    width: calc((100% - 60px) / 3);
   }
 }

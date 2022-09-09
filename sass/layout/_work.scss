@@ -9,7 +9,12 @@
 }
 
 .work {
-  padding-bottom: 94px;
+  display: none;
+
+  @include desktop {
+    display: block;
+    padding-bottom: 94px;
+  }
 }
 
 .software-products {
@@ -17,7 +22,7 @@
   gap: 30px;
 }
 
-.softaware-products__title {
+.software-products__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14px;
@@ -35,6 +40,6 @@
   display: flex;
 }
 
-.softaware-products__thumb {
+.software-products__thumb {
   position: relative;
 }

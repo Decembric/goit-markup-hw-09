@@ -4,10 +4,110 @@
 }
 
 .header-list {
-  display: flex;
+  display: none;
+  @include tablet {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+  }
+}
+
+.mobile-list {
   align-items: center;
   gap: 50px;
-  position: relative;
+  margin-bottom: 302px;
+  // position: relative;
+}
+
+.mobile-link {
+  color: var(--main-text-color);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.mobile-menu {
+  z-index: 100;
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  height: 796px;
+  top: 0;
+  left: 0;
+  padding-left: 40px;
+  padding-top: 48px;
+  @include tablet {
+    display: none;
+  }
+}
+
+.mobile-envelope {
+  color: #757575;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  @include mobile {
+    font-size: 28px;
+  }
+}
+
+.mobile-smartphone {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+
+  color: #757575;
+}
+
+.mobile-string:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-mail {
+  margin-bottom: 64px;
+}
+
+.mobile-tel {
+  margin-bottom: 32px;
+}
+
+.mobile-soc {
+  display: flex;
+}
+
+.mobile-soc-string {
+  margin-right: 6px;
+  @include mobile {
+    margin-right: 10px;
+  }
+}
+
+.mobile-soc-link:last-child {
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mobile-soc-link:first-child {
+  padding-left: 0;
+}
+
+.mobile-soc-link {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  color: #2196f3;
+  padding-left: 10px;
+  @include mobile {
+    font-size: 18px;
+    line-height: 1.22;
+  }
 }
 
 .blue {
@@ -23,26 +123,33 @@
   display: block;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: #000000;
   margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   align-items: center;
+  @include tablet {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin-right: 88px;
+  }
 }
 
 .header-link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--main-text-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
-  &:focus {
-    color: var(--hover-text-color);
+  @include tablet {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--main-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: var(--hover-text-color);
+    }
   }
 }
 
@@ -57,14 +164,54 @@
 .content-list {
   display: flex;
   margin-left: auto;
-  align-items: center;
-  gap: 50px;
+  align-items: baseline;
+  justify-content: space-between;
+  @include tablet {
+    display: block;
+    @include desktop {
+      display: flex;
+      gap: 30px;
+    }
+  }
+}
+
+.content-box {
+  display: none;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    transform: translate(-10%, 50%);
+    @include desktop {
+      transform: none;
+      position: static;
+    }
+  }
+}
+
+.content-box-mail {
+  @include tablet {
+    margin-bottom: 10px;
+  }
 }
 
 .mail {
-  color: var(--primary-text-color);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #757575;
   display: flex;
   align-items: center;
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
+.mail-menu-text {
+  color: var(--hover-text-color);
 }
 
 .envelope,
@@ -84,16 +231,50 @@
 }
 
 .current {
-  position: relative;
-  &::after {
-    content: "";
-    display: block;
-    height: 4px;
-    width: 100%;
-    background: #2196f3;
-    border-radius: 2px;
-    position: absolute;
-    bottom: -32px;
-    left: 0;
+  @include tablet {
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      height: 4px;
+      width: 100%;
+      background: #2196f3;
+      border-radius: 2px;
+      position: absolute;
+      bottom: -34px;
+      left: 0;
+    }
   }
+}
+
+.burger {
+  background-color: #fff;
+  padding: 0;
+  border: 0;
+  &:focus {
+    fill: var(--hover-text-color);
+  }
+  @include tablet {
+    display: none;
+  }
+}
+
+.cross {
+  background-color: #fff;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-100%, 100%);
+  &:focus {
+    fill: var(--hover-text-color);
+  }
+  @include tablet {
+    display: none;
+  }
+}
+
+.current-menu {
+  color: var(--hover-text-color);
 }

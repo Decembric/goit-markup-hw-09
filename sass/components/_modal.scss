@@ -25,8 +25,8 @@
 
 .modal {
   position: absolute;
-  width: 528px;
-  height: 581px;
+  width: 320px;
+  height: 609px;
   border-radius: 4px;
   background-color: var(--main-background-color);
   top: 50%;
@@ -37,6 +37,13 @@
   transform: translate(-50%, -50%), scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px;
+  @include mobile {
+    width: 450px;
+  }
+  @include desktop {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .is-hidden {
@@ -53,11 +60,14 @@
   display: inline-block;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
   margin-bottom: 12px;
+  @include desktop {
+    line-height: 1.15;
+  }
 }
 
 .modal-comments {
@@ -100,21 +110,26 @@
 
 .link-check {
   padding-left: 5px;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--hover-text-color);
 }
 
 .policy-check {
   display: flex;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
   margin-bottom: 30px;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.71;
+    justify-content: center;
+  }
 }
 
 .check-position {
@@ -165,7 +180,7 @@
 
 .rectangle-icon {
   position: relative;
-  margin-right: 7px;
+  margin-right: 8px;
   .check-box:checked + .policy-check span & {
     opacity: 0;
   }
@@ -180,7 +195,7 @@
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  transform: translate(125px);
+  transform: translateX(85px);
   color: var(--main-background-color);
   cursor: pointer;
   background: var(--hover-text-color);
@@ -192,5 +207,11 @@
   &:hover,
   &:focus {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+  @include mobile {
+    transform: translateX(22px);
+  }
+  @include desktop {
+    transform: translateX(124px);
   }
 }
