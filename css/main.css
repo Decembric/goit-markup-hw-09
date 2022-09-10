@@ -119,6 +119,7 @@ body {
   left: 0;
   padding-left: 40px;
   padding-top: 48px;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
   .mobile-menu {
@@ -350,6 +351,7 @@ body {
   background-color: #fff;
   padding: 0;
   border: 0;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .burger:focus {
   fill: var(--hover-text-color);
@@ -368,6 +370,7 @@ body {
   top: 0;
   right: 0;
   transform: translate(-100%, 100%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .cross:focus {
   fill: var(--hover-text-color);
@@ -501,7 +504,7 @@ body {
   margin-bottom: 10px;
   text-align: center;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .specification__title {
     text-align: left;
   }
@@ -1000,11 +1003,12 @@ body {
 @media screen and (min-width: 768px) {
   .button-block {
     margin-bottom: 30px;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1200px) {
   .button-block {
-    justify-content: center;
+    margin-bottom: 50px;
   }
 }
 
@@ -1049,7 +1053,7 @@ body {
   top: 0;
   left: 0;
   padding: 77px 24px;
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-link:hover .portfolio-popup-text, .portfolio-link:focus .portfolio-popup-text {
@@ -1273,11 +1277,6 @@ body {
 }
 .modal-btn:hover, .modal-btn:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-@media screen and (min-width: 480px) {
-  .modal-btn {
-    transform: translateX(22px);
-  }
 }
 @media screen and (min-width: 1200px) {
   .modal-btn {

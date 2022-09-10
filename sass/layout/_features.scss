@@ -35,7 +35,7 @@
   color: var(--main-text-color);
   margin-bottom: 10px;
   text-align: center;
-  @include desktop {
+  @include tablet {
     text-align: left;
   }
 }

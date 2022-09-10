@@ -17,7 +17,6 @@
   align-items: center;
   gap: 50px;
   margin-bottom: 302px;
-  // position: relative;
 }
 
 .mobile-link {
@@ -39,6 +38,8 @@
   left: 0;
   padding-left: 40px;
   padding-top: 48px;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   @include tablet {
     display: none;
   }
@@ -251,6 +252,7 @@
   background-color: #fff;
   padding: 0;
   border: 0;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:focus {
     fill: var(--hover-text-color);
   }
@@ -267,6 +269,7 @@
   top: 0;
   right: 0;
   transform: translate(-100%, 100%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:focus {
     fill: var(--hover-text-color);
   }
