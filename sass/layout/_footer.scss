@@ -28,11 +28,11 @@
   margin-bottom: 60px;
   @include tablet {
     margin-right: 165px;
-    text-align: left;
   }
   @include desktop {
     margin-right: 70px;
     margin-bottom: 0;
+    text-align: left;
   }
 }
 
@@ -45,6 +45,7 @@
   @include desktop {
     flex-wrap: nowrap;
     justify-content: start;
+    align-items: baseline;
   }
 }
 
